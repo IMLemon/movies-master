@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ti:app 
+  xmlns:ti="http://ti.appcelerator.org">
+  <id>com.appcelerator.movies</id>
+  <name>Movies</name>
+  <version>1.0</version>
+  <publisher>Appcelerator</publisher>
+  <url>http://www.appcelerator.com</url>
+  <description>Movies app</description>
+  <copyright>2015 by Appcelerator</copyright>
+  <icon>appicon.png</icon>
+  <fullscreen>false</fullscreen>
+  <navbar-hidden>false</navbar-hidden>
+  <analytics>false</analytics>
+  <guid>5a6d0460-a206-4060-9444-8b2b605e5c59</guid>
+  <property name="ti.ui.defaultunit" type="string">dp</property>
+  <ios>
+    <plist>
+      <dict>
+        <key>UISupportedInterfaceOrientations~iphone</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+        </array>
+        <key>UISupportedInterfaceOrientations~ipad</key>
+        <array>
+          <string>UIInterfaceOrientationPortrait</string>
+          <string>UIInterfaceOrientationPortraitUpsideDown</string>
+        </array>
+        <key>UIRequiresPersistentWiFi</key>
+        <false/>
+        <key>UIPrerenderedIcon</key>
+        <true/>
+        <key>UIStatusBarHidden</key>
+        <false/>
+        <key>UIStatusBarStyle</key>
+        <string>UIStatusBarStyleLightContent</string>
+        <key>CFBundleURLTypes</key>
+        <array/>
+      </dict>
+    </plist>
+  </ios>
+  <android 
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <manifest>
+      <uses-sdk android:minSdkVersion="14" android:targetSdkVersion="21"/>
+      <application android:theme="@style/Theme.NoActionBar">
+        <activity android:configChanges="keyboardHidden|orientation" android:label="Movies" android:name=".MoviesActivity" android:theme="@style/Theme.NoActionBar">
+          <intent-filter>
+            <action android:name="android.intent.action.MAIN"/>
+            <category android:name="android.intent.category.LAUNCHER"/>
+          </intent-filter>
+        </activity>
+      </application>
+      <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+      <uses-permission android:name="android.permission.INTERNET"/>
+      <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+      <uses-permission android:name="android.permission.BLUETOOTH"/>
+      <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+      <uses-permission android:name="android.permission.GET_TASKS"/>
+    </manifest>
+  </android>
+  <mobileweb/>
+  <modules>
+    <module platform="iphone">ti.coremotion</module>
+  </modules>
+  <deployment-targets>
+    <target device="android">true</target>
+    <target device="blackberry">false</target>
+    <target device="ipad">true</target>
+    <target device="iphone">true</target>
+    <target device="mobileweb">false</target>
+    <target device="windows">true</target>
+  </deployment-targets>
+  <sdk-version>5.0.0.GA</sdk-version>
+  <plugins>
+    <plugin version="1.0">ti.alloy</plugin>
+  </plugins>
+  <property name="appc-app-id" type="string">565fe4132fb374ee4264ca45</property>
+</ti:app>
